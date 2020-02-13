@@ -55,13 +55,13 @@ def setup_toolchains():
         sha256 = "867cd69c27445dcbaedd6d753f27d6b06b677c9fe0924d965a1da1ea8ac031f2",
     )
 
-    # http_archive(
-    #     name = "emscripten_clang",
-    #     build_file = "@iota_toolchains//:compilers/emscripten-clang.BUILD",
-    #     strip_prefix = "emscripten-llvm-e1.38.31",
-    #     url = "https://s3.amazonaws.com/mozilla-games/emscripten/packages/llvm/tag/linux_64bit/emscripten-llvm-e1.38.31.tar.gz",
-    #     sha256 = "a0c2f2c5a897577f40af0fdf68dcf3cf65557ff20c081df26678c066a4fed4b1",
-    # )
+    http_archive(
+        name = "emscripten_clang",
+        build_file = "@iota_toolchains//:compilers/emscripten-clang.BUILD",
+        strip_prefix = "emscripten-fastcomp-clang-1.39.7",
+        url = "https://github.com/emscripten-core/emscripten-fastcomp-clang/archive/1.39.7.tar.gz",
+        sha256 = "de4c69f99c2bedb7e55c35893c0a2606877d035d1b147f42d6b357e9c30ea280",
+    )
 
 def setup_initial_deps():
     http_archive(
