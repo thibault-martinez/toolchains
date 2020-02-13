@@ -5,7 +5,7 @@ set -euo pipefail
 clang_path="$PWD/external/emscripten_clang"
 #We choose a WORKSPACE because it's a file that must be present
 #and we take it's containing directory path
-clang_path=`readlink -f $clang_path/WORKSPACE`
+clang_path=`greadlink -f $clang_path/WORKSPACE`
 clang_path=${clang_path%"/WORKSPACE"}
 external_path=${clang_path%"/emscripten_clang"}
 
